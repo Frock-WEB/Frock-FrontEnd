@@ -1,6 +1,5 @@
 <script>
 import { Route } from "../model/route.entity.js";
-import { Company } from "../model/companies.entity.js";
 
 export default {
   name: "route-detail-item",
@@ -40,7 +39,6 @@ export default {
   <div class="route-detail-container">
     <div class="route-header">
       <div class="route-icon">
-        <img src="/placeholder.svg" alt="Route Icon" class="route-icon-img" />
       </div>
       <h1 class="route-title">Ruta Procedencia a Destino</h1>
       <div class="route-actions">
@@ -55,9 +53,6 @@ export default {
 
     <div class="route-info-container">
       <div class="company-info">
-        <div class="company-logo">
-          <img :src="company.logoUrl || '/placeholder.svg'" alt="Company Logo" class="company-logo-img" />
-        </div>
         <h2 class="company-name">{{ company.name }}</h2>
         <p class="company-address">Dirección</p>
 
@@ -126,13 +121,6 @@ export default {
 
 .company-info {
   flex: 1;
-}
-
-.company-logo-img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 10px;
 }
 
 .company-name {

@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LoginView from '@/views/auth/Login.vue'
-import RegisterView from '@/views/auth/Register.vue'
-import CompanyRegisterView from '@/views/auth/Company-register.vue'
+import LoginView from '../views/auth/Login.vue';
+import RegisterView from '../views/auth/Register.vue';
+import CompanyRegisterView from '../views/auth/Company-register.vue';
+import RouteComponent from '../route/components/route.component.vue';
+import RouteCompleteDetail from '../route-detail/pages/route-complete-detail.component.vue';
+
 
 // Importamos un componente placeholder para las rutas que aún no están implementadas
 const PlaceholderView = {
@@ -30,42 +33,13 @@ const PlaceholderView = {
 const routes = [
     {
         path: '/',
-        redirect: '/inicio'
+        component: RouteComponent
     },
     {
-        path: '/inicio',
-        name: 'Inicio',
-        component: PlaceholderView
-    },
-    {
-        path: '/paraderos',
-        name: 'Paraderos',
-        component: PlaceholderView
-    },
-    {
-        path: '/rutas',
-        name: 'Rutas',
-        component: PlaceholderView
-    },
-    {
-        path: '/login',
-        name: 'Login',
-        component: LoginView // Actualizado para usar el componente de login
-    },
-    {
-        path: '/register',
-        name: 'Register',
-        component: RegisterView // Nueva ruta para el registro
-    },
-    {
-        path: '/register-company',
-        name: 'RegisterCompany',
-        component: CompanyRegisterView // Nueva ruta para el registro de empresa
-    },
-    // Ruta para manejar rutas no encontradas
-    {
-        path: '/:pathMatch(.*)*',
-        redirect: '/inicio'
+        path: '/route/:id',
+        name: 'RouteDetail',
+        component: RouteCompleteDetail,
+        props: (route) => ({ routeId: route.params.id })
     }
 ]
 

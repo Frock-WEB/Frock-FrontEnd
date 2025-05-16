@@ -92,7 +92,8 @@ export default {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: flex;
+
+display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;

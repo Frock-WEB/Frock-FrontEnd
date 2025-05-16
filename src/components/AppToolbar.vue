@@ -10,11 +10,6 @@
       </div>
     </div>
 
-    <div class="toolbar-center">
-      <router-link to="/inicio" class="nav-item">Inicio</router-link>
-      <router-link to="/paraderos" class="nav-item">Paraderos</router-link>
-      <router-link to="/rutas" class="nav-item">Rutas</router-link>
-    </div>
 
     <div class="toolbar-right">
       <div class="profile-icon">
