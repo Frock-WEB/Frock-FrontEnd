@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '@/views/auth/Login.vue'
 import RegisterView from '@/views/auth/Register.vue'
 import CompanyRegisterView from '@/views/auth/Company-register.vue'
+import CompanyLoginView from "@/views/auth/Company-login.vue";
 
 const PlaceholderView = {
     template: '<div class="placeholder"><h2>Esta página está en desarrollo</h2><p>Próximamente disponible</p></div>',
@@ -49,6 +50,11 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: LoginView
+    },
+    {
+        path: '/login-company',
+        name: 'LoginCompany',
+        component: CompanyLoginView
     },
     {
         path: '/register',
